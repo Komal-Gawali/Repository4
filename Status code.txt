@@ -1,0 +1,8 @@
+
+
+  STATUS CODE:
+
+1) When I hit chercher.tech/explicit-wait
+    I found 404 not found Status code
+
+   

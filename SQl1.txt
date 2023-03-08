@@ -1,0 +1,716 @@
+     
+    DAY- 01 :  
+
+   * SELECT: This querry are use for fetch/Reada the data from database.
+            This DQL commands.
+  
+    1)  SELECT Customerid, customerName 
+        FROM Customers;
+          
+    2)  Select CustomerId, CustomerName, ContactName
+        FROM Customers;
+
+    3)  Select Customername, City
+        FROM Customers;
+
+    4)  Select CustomerName, City, country, postalCode
+        FROM Customers; 
+
+    5)  Select CustomerName, Address, postalCode
+        FROM Customers;
+
+    6)  Select CustomerID, CustomerName, postalCode
+        FROM Customers;
+
+    7)  Select CustomerID, CustomerName,Country
+        FROM Customers;
+
+    8)  Select Categoryid, CategoryName
+        FROM Categories;
+
+    9)  Select CategoryName, Description
+        FROM Categories;
+
+   10)  Select EmployeeID, FirstName, LastName
+        FROM Employees;
+
+   11)  Select FirstName, LastName, BirthDate
+        FROM Employees;
+
+   12)  Select EmployeeID, Photo, Notes
+        FROM Employees;
+
+   13)  Select * FROM OrderDetails;
+
+   14)  Select OrderID, CustomerID, OrderDate, ShipperID
+        FROM Orders;
+
+   15)  Select ProductID, ProductName, SupplierID
+        FROM Products;
+
+   16)  Select ProductID, ProductName, Unit, Price
+        FROM Products;
+
+   17)  Select ShipperID, ShipperName, Phone
+        FROM Shippers;
+
+   18)  Select SupplieriD, SupplierName, Address
+        FROM Suppliers;
+
+   19)  Select SupplierName, postalCode, Country, Phone
+        FROM Suppliers;
+
+   20)  Select Distinct Country
+        FROM Suppliers;
+
+   21)  Select Distinct City
+        FROM Suppliers;
+
+   22)  Select Distinct OrderID
+        FROM Orders;
+
+   23)  Select Distinct ShipperID
+        FROM Orders;
+ 
+   24)  Select CustomerName, City
+        FROM Customers
+        WHERE City = 'Berlin'
+
+   25)  Select OrderdetailID, ProductID
+        FROM OrderDetails
+        WHERE ProductID = 41;
+   26)  Select OrderdetailID, ProductID, OrderID
+        FROM OrderDetails
+        WHERE OrderID = 10252;
+
+   27)  Select SupplierID, ContactName, Country, City
+        FROM Suppliers
+        WHERE Country = 'USA';
+
+   28)  Select SupplierID, ContactName, Country, City
+        FROM Suppliers
+        WHERE Country = 'UK';
+
+   29)  Select SupplierID, ContactName, Country, City
+        FROM Suppliers
+        WHERE City = 'Tokyo';
+
+   30)  Select SupplierID, ContactName, Country, City
+        FROM Suppliers
+        WHERE Country = 'Australia';
+
+   DAY- 02:
+   31)  Select * From Customers
+        Where Country = 'UK' And City = 'London'
+
+   32)  Select* From Orders
+        Where CustomerID = 90 And EmployeeID = 5;
+
+   33)  Select* From Orders
+        Where ShipperID = 3 And EmployeeID = 5;
+
+   34)  Select* From OrderDetails
+        Where OrderID = 10248 And ProductID = 72;
+
+   35)  Select* From OrderDetails
+        Where OrderID = 10248 OR ProductID = 41;
+
+   36)  SELECT * FROM [Suppliers]
+        Where City ='Tokyo' OR Country = 'Sweden';
+
+   37)  Select * From Products
+        Where CategoryID = 2 OR Price = 25;
+
+   38)  Select * From Orders
+        Where EmployeeID = 5 OR ShipperID = 1;
+
+   39)  Select * From Orders
+       Where NOT EmployeeID = 5 ;
+
+   40)  Select * From Customers
+       Where Not City = 'Tokyo';
+
+   41)  Select * From Suppliers
+       Where Not Country ='Japan';
+
+   42)  Select * From Suppliers
+       Where Not Country = 'USA';
+
+   43)  Select * From Products
+       Where Not CategoryID = '5';
+
+   44)  Select * From OrderDetails
+       Where NOT ProductID = 51;
+
+   45) Select * From Customers
+      Where Not Country = 'Germany';
+
+   46)  Select * From OrderDetails 
+        ORDER By ProductID ASC;
+
+   47) Select * From OrderDetails 
+       ORDER By ProductID DESC;
+
+   48)  Select * From Suppliers
+      ORDER BY SupplierName ASC;
+
+   49)  Select * FROM OrderDetails
+      ORDER BY Quantity DESC;
+
+   50)  Select * From Customers
+      ORDER BY CustomerName ASC;
+
+   51)  Select * From Customers
+      ORDER BY ContactName DESC;
+
+     DAY- 03
+   52- [a])  Insert INTO Customers (CustomerID, CustomerName, ContactName, City, PostalCode, Country)
+       VALUES (95, 'Joy Brounk', 'Joy', 'London', 120098, 'UK');
+
+   52-[b])  INSERT INTO Customers((CustomerID, CustomerName, ContactName, City, Country)
+           VALUES ('93', 'Suzu Shaw', 'Shaw', 'Shangai', 'China');
+ 
+   53)  SELECT CustomerName, ContactName, Address
+        FROM Customers
+        WHERE Address IS NULL;
+
+   54)  UPDATE Customers 
+        Set CustomerName = 'John Decluze ', 	ContactName = 'Jonny', 	City = 'Bergen'
+        WHERE CustomerID = 97;
+
+   55)  DELETE FROM Customers
+        WHERE CustomerName = 'Joy Brounce';
+
+   56)  DELETE FROM Shippers
+        WHERE ShipperName ='Speedy Express' ;
+
+   57)  DELETE FROM OrderDetails
+        WHERE OrderDetailID = 89;
+
+   58)  DELETE FROM Products
+        WHERE ProductID = 34;
+
+   59)  MySQL Syntax:
+        SELECT * FROM Customers LIMIT 66;
+
+   60)  SELECT * FROM Products LIMIT 6;
+
+   61)  SQL Server/MS Access:
+        SELECT TOP 50 PERCENT * FROM Products;
+
+   62)  SELECT TOP 45 PERCENT * FROM OrderDetails;
+
+   63)  SELECT TOP 60 PERCENT * FROM Products;
+
+   64)  SELECT TOP 60 PERCENT * FROM Suppliers;
+
+   65)   Starting ChromeDriver 107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}) on port 9515
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+   
+ 
+      DAY - 04
+
+  66)  Select * From Customers
+       Where Country Like 'a%' ;
+
+  67)  Select * From Customers
+       Where City Like 'b%' ;
+
+  68)  Select * From Customers
+       Where  ContactName Like '%l';
+
+  69)  Select * From Customers
+       Where CustomerName Like 'l%';
+
+  70)  Select * From Customers
+       Where CustomerName Not Like  'l%';
+
+  71)  Select * From Customers
+       Where CustomerName Not Like  '%l';
+
+  72)  Select * From Customers
+       Where CustomerName  Like  '%l';
+
+  73)  Select * From Customers
+       Where CustomerName  Like  '%e';
+
+  74)  Select * From Customers
+       Where CustomerName  Like  'e%';
+
+  75)  Select * From Customers
+       Where CustomerName  Like  'f%';
+
+  76)  Select * From Customers
+       Where CustomerName  Like  '%f%';
+
+  77)  Select * From Customers
+       Where CustomerName  Like  '%fi%';
+
+  78)  Select * From customers
+       Where Country Like '%Ti%' ;
+
+  79)  Select * From customers
+       Where Country Like '%na%' ;
+
+  80)  Select * From customers
+       Where Country Like '%na__' ;
+
+  81)  Select * From customers
+       Where Country Like '_a%' ;
+ 
+  82)  Select * From customers
+       Where Country Like '_r%' ;
+
+  83)  Select * From Products
+       Where ProductName Like 'a%';
+
+  84)  Select * From Products
+       Where ProductName Like '__ar%' ;
+
+  85)  Select * From Products
+       Where ProductName Like '_ar%' ;
+ 
+  86)  Select * From Products
+       Where ProductName Like '_a%' ;
+
+  87)  Select * From Products
+       Where ProductName Like 'a%p' ;
+
+  88)  Select * From Products
+       Where ProductName Like 'l%e' ;
+
+  89)  Select * From Products
+       Where ProductName Like 'i%' ;
+
+  90)  Select * From Customers 
+       Where Country Like 'f%e'
+
+  91)  Select * From Customers 
+       Where Country Like 'g%y';
+
+  92)  Select * From Customers 
+       Where Country Like '%y';
+
+  93)  Select * From Customers 
+       Where Country Like 'i%';
+
+  94)  Select * From Customers 
+       Where Country Like 'i%d';
+
+  95)  Select * From Suppliers
+       Where SupplierName Like 'a%';
+
+  96)  Select * From Suppliers
+       Where SupplierName Like 'g%';
+
+  97)  Select * From Suppliers
+       Where SupplierName Like '%re%';
+
+  98)  SELECT * FROM Customers
+       WHERE Country LIKE 'can%';
+
+  99)  SELECT * FROM Customers
+       WHERE City LIKE '[csp]%';
+
+ 100)  SELECT * FROM Customers
+       WHERE City LIKE 'L_n_on';
+
+ 101)  Select * From Customers
+       Wwhere Country Like 'c_n__a';
+
+ 102)  Select * From Customers
+       Where Country Like 'f_a__e';
+     
+      DAY - 05
+    * note - In do the work of multiple or .
+    
+ 103)  Select * From Customers
+       Where Country IN ('Germany', 'Argentina','France');
+
+ 104)   Select * From Customers
+       Where City IN ('Berlin', 'London','Madrid');
+
+ 105)  Select * From Orders
+       Where OrderID In ('10248', '10249', '10251');
+ 
+ 106)  Select * From OrderDetails
+       Where OrderID In ('10248', '10249', '10251');
+
+ 107)  Select * From Suppliers
+       Where Country In ('UK', 'Japan', 'Canada');
+
+ 108)  Select * From OrderDetails
+       Where ProductID IN ('11', '14', '9', '10');
+
+ 109)  Select * From Customers
+       Where Country NOT IN ('UK', 'Canada', 'France');
+
+ 110)  Select * From OrderDetails
+       Where OrderID NOT IN ('10248', '10249', '10251');
+
+ 111)  Select * From Orders
+       Where EmployeeID NOT IN ('6', '5', '8');
+
+ 112)  Select * From Suppliers
+       Where Country NOT IN ('USA', 'France', 'Canada');
+ 
+ 113)  Select * From Suppliers
+       Where Country IN (Select Country From Customers);
+
+ 114)  Select * From Orders
+       Where OrderID IN (Select OrderID From OrderDetails);
+
+ 115)  Select * From OrderDetails
+       Where ProductID IN (Select CustomerID From Orders);
+
+ 116)  Select * From Customers
+       Where City IN (Select City From Suppliers);  
+
+ 117)  Select * From Customers
+       Where CustomerID IN (Select EmployeeID From Employees);
+
+ 118)  Select * From Customers
+       Where CustomerID Between 15 AND 25;
+
+ 119)  Select * From OrderDetails
+       Where OrderDetailID Between 15 AND 25;
+
+ 120)  Select * From OrderDetails
+       Where OrderDetailID Between 101 AND 125;
+
+ 121)  Select * From Orders
+       Where ShipperID Between 1 AND 2;
+
+ 122)  Select * From Orders
+       Where EmployeeID Between 1 AND 6;
+
+ 123)  Select * From Customers
+       Where CustomerID Between 20 And 49
+       And Country Like 'France';
+
+ 124)  Select * From Customers
+       Where CustomerID Between 20 And 49;
+
+ 125)  Select * From OrderDetails
+       Where ProductID Between 15 AND 30
+       ORDER BY ProductID  ASC;
+
+ 126)  Select * From OrderDetails
+       Where ProductID Between 1 AND 70
+       And OrderID IN ('10259', '10234', '10248')
+       Order By ProductID ASC;
+
+ 127)  Select * From OrderDetails
+       Where Quantity Between 1 AND 70
+       And OrderID IN ('10259', '10254', '10248')
+       Order By ProductID ASC;
+
+ 128)  SELECT * FROM Suppliers
+       Where Country between 'France' AND 'USA'
+       Order by Country ;
+
+ 129)  SELECT * FROM Suppliers
+       Where Country between 'France' AND 'USA'
+       And City IN ('Tokyo', 'Berlin', 'Paris', 'Frankfurt')
+       Order by Country ;
+
+ 130)  SELECT * FROM Suppliers
+       Where Country NOT between 'France' AND 'USA';
+
+ 131)  SELECT * FROM Suppliers
+       Where Country NOT between 'France' AND 'USA'
+       AND ContactName Like 'a%';
+ 
+ 132)  Select SupplierName AS SupName
+       FROM Suppliers;
+
+ 133)  SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate, Customers.CustomerID
+       FROM Orders
+       INNER JOIN Customers
+       ON Orders.CustomerID=Customers.CustomerID
+       Order BY Customers.CustomerID ASC;
+
+ 134)  Select OrderDetails.OrderDetailID, Customers.CustomerName, OrderDetails.OrderID, Customers.Country, Customers.City, OrderDetails.Quantity
+       From Customers
+       INNER JOIN OrderDetails
+       ON Customers.CustomerID = OrderDetails.OrderDetailID
+       ORDER BY Quantity ASC;
+
+ 135)  Select OrderDetails.OrderDetailID, Customers.CustomerName, OrderDetails.OrderID, Customers.Country, Customers.City, OrderDetails.Quantity
+       From Customers
+       INNER JOIN OrderDetails
+       ON Customers.CustomerID = OrderDetails.Quantity
+       ORDER BY Quantity ASC;
+
+ 136)  Select Suppliers.SupplierID, Orders.OrderDate, Orders.OrderID, Suppliers.SupplierName, Suppliers.Country
+       FROM Suppliers
+       INNER JOIN Orders
+       ON Suppliers.SupplierID = Orders.ShipperID ;
+
+ 137)  Select Suppliers.SupplierID, Orders.OrderDate, Orders.OrderID, Suppliers.SupplierName, Suppliers.Country
+       FROM Suppliers
+       INNER JOIN Orders
+       ON Suppliers.SupplierID = Orders.ShipperID 
+       Order By Suppliers.SupplierID;
+
+ 138)  Select Customers.CustomerID, Customers.CustomerName, Categories.Description
+       FROM Customers
+       LEFT JOIN Categories 
+       ON Customers.CustomerID=Categories.CategoryID;
+
+ 139)  Select Customers.CustomerID, Customers.CustomerName, Products.ProductName, Products.Price
+       FROM Customers
+       LEFT JOIN Products 
+       ON Customers.CustomerID=Products.ProductID; (ANS :- 95 no. of row from Customers table)
+
+ 140)  Select Customers.CustomerID, Customers.CustomerName, Products.ProductName, Products.Price
+       FROM Customers
+       RIGHT JOIN Products 
+       ON Customers.CustomerID=Products.ProductID;  (ANS :- 77 no. of row from Products table)
+
+ 141)  Select Customers.CustomerID, Customers.CustomerName, Products.ProductName, Products.Price
+       FROM Customers
+       FULL JOIN Products 
+       ON Customers.CustomerID=Products.ProductID;
+
+ 142)  Select Customers.CustomerID, Customers.CustomerName, Orders.OrderID 
+       From Orders
+       FULL JOIN Customers
+       ON Customers.CustomerID=Orders.EmployeeID;
+
+ 143)  SELECT City, Country FROM Customers
+       UNION
+       SELECT City, Country FROM Suppliers
+       ORDER BY City;
+
+ 144)  SELECT CustomerID, CustomerName, City, Country FROM Customers
+       UNION
+       SELECT SupplierID, SupplierName, City, Country FROM Suppliers;
+
+ 145)  SELECT CustomerID, CustomerName, City, Country FROM Customers
+       UNION
+       SELECT SupplierID, SupplierName, City, Country FROM Suppliers
+       ORDER BY Country ;
+
+     DAY -06
+
+ 146)  SELECT COUNT(SupplierID),  Country
+        FROM Suppliers
+        GROUP BY  Country
+        Order By  Country ASC;
+
+ 147)  SELECT COUNT(OrderID),  OrderID
+        FROM Orders
+        GROUP BY  OrderID
+        Order By  OrderID ASC;
+
+ 148)  SELECT COUNT(EmployeeID) AS Coun,  EmployeeID
+        FROM Orders
+        GROUP BY  EmployeeID
+        Order By  EmployeeID ASC;
+
+ 149)  FROM Orders
+        GROUP BY  CustomerID
+        Order By  CustomerID ASC;
+
+ 150)  SELECT COUNT(CustomerID) AS Coun,  EmployeeID, CustomerID
+        FROM Orders
+        GROUP BY  CustomerID
+        Order By  EmployeeID ASC;
+
+ 151)  SELECT COUNT(CustomerID) AS Coun,  EmployeeID, CustomerID
+        FROM Orders
+        GROUP BY  EmployeeID
+        Order By  EmployeeID ASC;  
+
+ 152)  SELECT COUNT(CustomerID) AS Coun,  EmployeeID, CustomerID
+       FROM Orders
+       GROUP BY  EmployeeID
+       Order By  CustomerID ASC;
+
+ 153)  SELECT COUNT(OrderDetailID) AS Coun,  OrderID
+         FROM OrderDetails
+         GROUP BY  OrderID
+         Order By  OrderDetailID ASC;
+
+ 154)  SELECT COUNT(OrderDetailID) AS Coun,  OrderID
+        FROM OrderDetails
+        GROUP BY  OrderID
+        Order By  Coun ASC;
+
+ 155)  SELECT COUNT(CustomerID), Country
+        FROM Customers
+        GROUP BY Country
+        HAVING Country = 'Germany';
+
+ 156)  SELECT COUNT(CustomerID), Country
+        FROM Customers
+        GROUP BY Country
+        HAVING Country = 'Germany' OR Country = 'Sweden';
+
+ 157)  SELECT COUNT(CustomerID), Country
+        FROM Customers
+        GROUP BY Country
+        HAVING Country IN('Germany' , 'Sweden', 'France');
+
+ 158)  Select Count(SupplierID) , Country
+        From Suppliers
+        Group By Country;
+
+ 159)  Select Count(SupplierID) , Country
+         From Suppliers
+         Group By Country
+         HAVING Country IN ( 'USA', 'Canada') ;
+
+ 160)  Select Count(SupplierID) , Country
+        From Suppliers
+        Group By Country
+        HAVING Country= 'UK' AND City = 'Londona';
+
+ 161)  Select Count(SupplierID) , Country, City
+        From Suppliers
+        Group By Country
+        HAVING Country= 'UK' AND City = 'Londona';
+
+ 162)  Select Count(SupplierID) AS ID , Country, City
+       From Suppliers
+       Group By Country
+       HAVING ID > 3;
+        
+    DAY - 07
+    
+ 163)  SELECT DISTINCT City , Country FROM Customers
+        WHERE City <> 'Berlin'
+        ORDER BY City;
+      (<> sign is use for not showing data from database)
+
+ 164)  SELECT DISTINCT City , Country FROM Suppliers
+        WHERE City <> 'Berlin'
+        ORDER BY City;
+
+ 165)  SELECT DISTINCT  OrderDetailID, OrderID FROM OrderDetails
+         WHERE OrderID <> '10248'
+         ORDER BY OrderID;
+
+ 166)  SELECT DISTINCT  OrderDetailID, OrderID FROM OrderDetails
+         WHERE OrderID = '10248'
+         ORDER BY OrderID;
+
+ 167)  SELECT DISTINCT  OrderDetailID, OrderID FROM OrderDetails
+         WHERE OrderID <= '10248'
+         ORDER BY OrderID;
+
+ 168)  SELECT DISTINCT  OrderDetailID, OrderID FROM OrderDetails
+         WHERE OrderID >= '10248'
+         ORDER BY OrderID;
+
+ 169)  SELECT * FROM Orders
+         WHERE CustomerID <> 2;
+
+ 170)  SELECT * FROM Orders
+         WHERE CustomerID >= 2
+         ORDER BY CustomerID;
+
+ 171)  SELECT COUNT(EmployeeID) AS EMP, ShipperID, EmployeeID
+         FROM Orders
+         GROUP BY EmployeeID;
+
+ 172)  SELECT COUNT(EmployeeID) AS EMP, ShipperID, EmployeeID
+         FROM Orders
+         GROUP BY EmployeeID
+         HAVING EmployeeID> 4;
+
+ 173)  SELECT COUNT(EmployeeID) AS EMP, ShipperID, EmployeeID
+         FROM Orders
+         GROUP BY EmployeeID
+         HAVING EmployeeID<> 4;
+
+ 174)  SELECT COUNT(EmployeeID) AS EMP, ShipperID, EmployeeID
+         FROM Orders
+         GROUP BY EmployeeID
+         HAVING EmployeeID = 4;
+
+ 175)  SELECT COUNT(EmployeeID) AS EMP, CustomerID, EmployeeID
+         FROM Orders
+         GROUP BY CustomerID
+         HAVING EmployeeID = 4;
+
+ 176)  Select Count (Country) AS CC, Country
+         FROM Customers
+         Group BY Country
+         HAVING Country = 'UK' OR Country = 'USA';
+
+ 177)  Select MAX(Price), SupplierID
+         From Products
+         WHERE Price < (Select MAX(Price) FROM Products);
+
+ 178)  SELECT COUNT(Price), ProductID, Price
+         From Products
+         Group By Price 
+         Order By ProductID; 
+
+ 179)
+
+ 180)
+
+      API Testing:
+    MY API Keys : 9b6250fb7ffd886f49bf8e6ab6c677a6
+
+   1) GET:-
+          GET requests are the most common and widely used methods in APIs 
+      and websites. Simply put, the GET method is used to retreive data from 
+      a server at the specified resource. For example, say you have an API 
+      with a /users endpoint. Making a GET request to that endpoint should 
+      return a list of all available users.
+
+          Since a GET request is only requesting data and not modifying any 
+      resources, it's considered a safe and idempotent method.
+
+   6) HEAD Method:
+           Testing an API with HEAD requests Making API requests 
+      with HEAD methods is actually an effective way of simply 
+      verifying that a resource is available. It is good practice
+      to have a test for HEAD requests everywhere you have a test 
+      for GET requests (as long as the API supports it).
+    
+  7) echo "# AlphaProjet" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Komal-Gawali/AlphaProjet.git
+git push -u origin main
+
+  8) https://github.com/Komal-Gawali/AlphaProjet.git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

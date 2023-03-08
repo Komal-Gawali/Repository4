@@ -1,0 +1,12 @@
+SELECT FIRST_NAME ,LAST_NAME
+FROM employee.employees
+where MANAGER_ID>0 and DEPARTMENT_ID in (
+select DEPARTMENT_ID from departments
+where LOCATION_ID in(
+select LOCATION_ID from locations
+where COUNTRY_ID='US'
+)
+)order by FIRST_NAME;
+
+
+

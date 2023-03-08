@@ -1,0 +1,9 @@
+SELECT e1.FIRST_NAME,e1.LAST_NAME,e1.SALARY
+ FROM employee.employees e1
+ where e1.SALARY>
+ (
+ SELECT avg(e2.SALARY)
+ FROM employee.employees e2
+ where e2.DEPARTMENT_ID=e1.DEPARTMENT_ID
+ )
+ ;

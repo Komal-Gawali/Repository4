@@ -1,0 +1,53 @@
+1) Alises-> special name for table
+*code ->   
+      SELECT FIRST_NAME as fn,LAST_NAME as ln 
+FROM employee.employees;
+
+2)Unique Id Or anything :-
+*code -> 
+         SELECT distinct DEPARTMENT_ID
+FROM employee.employees;
+
+3) Sorting by Id or anything:-
+* code ->
+           select FIRST_NAME , LAST_NAME
+            From employee.employees
+order by FIRST_NAME,LAST_NAME;
+
+
+    4)	Write a query to get the employee ID, name (first_name, last_name), salary in ascending order of salary. 
+     Ans CODE ->   
+                 select DEPARTMENT_ID, FIRST_NAME,LAST_NAME,salary
+                 From employee.employees
+                 order by salary; 
+ 
+      5) Write a query to get the maximum and minimum salary from employees table 
+       Ans CODE -> 
+                  select max(salary),min(Salary)
+                  From employee.employees;
+         
+       6)Write a query to get the average salary and number of employees in the employees table. 
+        Ans CODE ->
+                    select avg(salary),count(*)
+                    From employee.employees;         
+        7)Write a query to get the number of employees working with the company.
+        Ans CODE ->
+                   select count(*)
+                   From employee.employees;
+
+        8)Write a query to get the number of designations available in the employees table. 
+         Ans CODE ->
+                    select count(distinct JOB_ID)
+                     From employee.employees;
+
+        9)	Write a query get all first name from employees table in upper case.
+        Ans CODE ->
+                   1)Upper Case :-
+
+                    select upper(First_Name) 
+                    From employee.employees;
+
+                   2)Lower Case:-
+
+                     select lower(First_Name)
+                     From employee.employees; 

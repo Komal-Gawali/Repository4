@@ -1,0 +1,21 @@
+1)show databases; -----> databse dekhane ke liye
+2)create database [db_nsame];-----> database banane ke liye
+3)use [db_name];-----> database use krne ke liye
+4)drop database [db_name]------> delete database krne ke liye
+5)create table[table_name](col1,col2,col3,col4.......);-----> table create krney ke liye
+-->EVERY COLOUM CAN SAY ATTRIBUTE<-------
+eg:-  create table ganesh(id int(11)primary key, name varchar(100) not null, city varchar(50));
+
+6) show tables;  ----> tabale create krne ke liye 
+7)desc [table_name]; ----->  konsa our kya table banaya hai
+8) drop table[table_neme]; -----> table delete krne ke liye
+9)alter table [table name] rename to [new table name];  -----> new table name dene ke liye or rename
+10)truncate table [new_table name]; -----> for delete all the data under the table\
+11)insert into [tabel_name] (id,name,city) values(12,'Ganesh','Nagpur');  ----> insert data into table way 1
+12)insert into [table name] values(23,'Rimjhim','Nagpur');  -----> Way 2 for insert data into table;
+13)select * from [table_name]; -----> Show inserted data in table 
+14)alter table [table_name] add colname type; ------> add colum into the database
+15)update [table_name] set colname="47774574" where id='55';  -----> add the data in new created colume
+16) update [table_name] set colname1='jannu',colname2='100002000' where rn='1';------->update two coloum at a time
+
+ 

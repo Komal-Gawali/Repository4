@@ -1,0 +1,43 @@
+package ClassTypes;
+
+public class Prog_2 {
+	
+	
+	public void multi02()
+	{
+		System.out.println("Non Static Method without parameter Different Class");
+		int emp_id = 01;
+		String name = "Swaraj Bate";
+		double salary = 34000.78;
+		System.out.println("Employee Id = " + emp_id);
+		System.out.println("Employee name = " + name);
+		System.out.println("salary = " + salary);
+	}
+	public void multi03(int emp_id, String name, double salary)
+	{
+		System.out.println("Non Static Method with parameter Different Class");
+		System.out.println("Employee Id = " + emp_id);
+		System.out.println("Employee name = " + name);
+		System.out.println("salary = " + salary);
+	}
+		
+	public static void div01()
+	{
+		System.out.println("Static Method without parameter Different Class");
+		int a=20;
+		int b=10;
+		int c=0;
+		c=a/b;
+		System.out.println("Division = " + c);
+             		
+	}
+	public static void div02(double a, double b)
+	{
+		System.out.println("Static Method with parameter Different Class");
+		
+		double c=0;
+		c=a/b;
+		System.out.println("Division = " + c);
+             		
+	}
+}

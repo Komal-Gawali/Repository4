@@ -1,0 +1,16 @@
+package Pages;
+
+import Base.TestBase;
+
+public class InventoryPage extends TestBase {
+	LoginPage log = new LoginPage();
+	public String verifyInventoryUrl() throws Exception
+	{
+		log.VerifyLoginInfo();
+		Thread.sleep(2000);
+		return driver.getCurrentUrl();
+		
+		
+	}
+
+}

@@ -1,0 +1,46 @@
+package TestCases;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import Base.TestBase;
+import Pages.InventoryPage;
+import Pages.LoginPage;
+
+public class InventoryPageTest extends TestBase {
+	LoginPage log;
+	InventoryPage inv;
+	@BeforeMethod
+	public void setup()
+	{
+	 initialization();
+	 log = new LoginPage(); 
+	 inv = new InventoryPage();
+	}
+	public void login() throws Exception
+	{
+		log.VerifyLoginInfo();
+	}
+	
+	@Test
+	
+	public void verifyInventoryUrlTest() throws Exception
+	{
+		String exp ="https://www.saucedemo.com/inventory.html";
+		String act=inv.verifyInventoryUrl();
+		Thread.sleep(2000);
+		Assert.assertEquals(act, exp);
+		
+	}
+	
+	@AfterMethod
+	
+	public void closeBrowser()
+	{
+		driver.close();
+	}
+
+	
+}

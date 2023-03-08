@@ -1,0 +1,49 @@
+SELECT LAST_NAME FROM employee.employees
+where LAST_NAME like '______';
+
+
+SELECT LAST_NAME FROM employee.employees
+where length(LAST_NAME)=6;
+
+
+SELECT LAST_NAME FROM employee.employees
+where LAST_NAME like '__e%';
+
+
+
+SELECT FIRST_NAME,LAST_NAME,SALARY,SALARY*0.15 as pf
+ FROM employee.employees;
+ 
+
+
+ 
+ SELECT LAST_NAME FROM employee.employees
+where LAST_NAME in ('BLACK');
+
+
+SELECT JOB_ID,count(*) FROM employee.employees
+group by JOB_ID;
+
+
+SELECT MANAGER_ID,min(salary) 
+FROM employee.employees
+group by MANAGER_ID; 
+
+
+
+SELECT DEPARTMENT_ID,sum(salary) 
+FROM employee.employees
+group by DEPARTMENT_ID; 
+
+
+select JOB_ID,avg(SALARY) 
+from employee.employees
+where JOB_ID!='IT_PROG'
+group by JOB_ID;
+
+
+
+select JOB_ID,max(SALARY) 
+from employee.employees
+group by JOB_ID
+having max(salary)>=4000
